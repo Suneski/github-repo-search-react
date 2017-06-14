@@ -1,22 +1,21 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
 
-import { store, actions } from './Store.js';
-
-
 class App extends Component {
   constructor() {
     super();
-    this.state = store.getState();
-  }
-
-  componentDidMount() {
-    store.subscribe(() => this.setState(store.getState()));
+    this.state = {
+      searchTerm: '',
+      page: ''
+    }
   }
 
   searchQueryText(evt) {
     console.log(evt.target.value)
-    store.dispatch({ type: actions.UPDATE_QUERY_TEXT, value: evt.target.value, page: 1 });
+    this.setState({
+      searchTerm: evt.target.value,
+      page: 1
+    })
   }
 
   makeAjaxCall() {
