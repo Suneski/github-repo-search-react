@@ -1,1 +1,118 @@
 @import 'reset';
+@import url('https://fonts.googleapis.com/css?family=Play');
+
+body {
+  background-image: url(too-real-octocat.jpg);
+  background-position: 0 -100px;
+  background-attachment: fixed;
+  font-family: 'Play', sans-serif;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  background-color: black;
+  padding: 5px 0 5px 5px;
+  width: 100%;
+  color: white;
+  z-index: 5;
+  input {
+    width: 250px;
+  }
+  #search-query, #next-button, #previous-button, .search-results {
+    margin-left: 10px;
+  }
+  .search, #search-query, button {
+    float: left;
+  }
+  .search {
+    padding: 2px 0;
+  }
+  #next-button, #previous-button {
+    display: none;
+    padding: 2px 0;
+  }
+  .search-results {
+    display: none;
+  }
+  .total-results {
+    display: none;
+    float: right;
+    margin-right: 10px;
+  }
+  .total-repos {
+    float: right;
+    padding-right: 10px;
+    display: none;
+  }
+}
+
+
+
+
+
+ul {
+  margin-top: 40px;
+  li {
+    border: 1px solid black;
+    height: 100px;
+    margin: 10px 2%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(70, 70, 70, 0.6);
+    img {
+      width: 100px;
+      border-radius: 100%;
+      border: 3px solid rgba(0, 0, 0, 0.25);
+      float: left;
+      opacity: .8;
+      margin: 0 auto;
+      display: block;
+    }
+    a {
+      display: block;
+      text-decoration: none;
+      color: rgba(55, 51, 238, 0.8);
+      text-shadow: 0 0 1px #000;
+      font-size: 40px;
+      padding: 2.5px 0;
+      margin-left: 120px;
+      &:hover {
+        color: rgba(0, 0, 0, .5);
+      }
+    }
+    .bold {
+      font-weight: bold;
+    }
+  }
+}
+
+
+
+
+
+@media (max-width: 1250px) {
+  ul li {
+    height: 75px;
+    img {
+      width: 75px;
+    }
+    a {
+      font-size: 30px;
+      margin-left: 95px;
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  ul li {
+    height: 50px;
+    a {
+      font-size: 20px;
+      margin-left: 70px;
+    }
+    img {
+      width: 50px;
+    }
+  }
+}
