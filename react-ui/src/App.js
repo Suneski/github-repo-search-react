@@ -10,6 +10,8 @@ class App extends Component {
       searchTerm: '',
       page: '',
       searchResults: [],
+      previousButton: 'previous-button-invisible',
+      nextButton: 'next-button-invisible',
     }
   }
 
@@ -31,8 +33,21 @@ class App extends Component {
         pageCount: Math.ceil(data.total_count / 30),
         searchResults: data.items,
       })
+      if (this.state.pageCount > 1) {
+        this.setState({
+          previousButton: 'previous-button-visible',
+          nextButton: 'next-button-visible'
+        })
+      }
     });
   };
+
+  previousButton() {
+    if (this.state.page > 1)
+      this.setState({
+        page: this.state.page - 1
+      })
+  }
 
 
   render() {
@@ -53,7 +68,7 @@ class App extends Component {
           <p className='search'>SEARCH: </p>
           <input id='search-query' placeholder="github repository name" onKeyUp={(evt) => this.searchQueryText(evt)}/>
           <button className='search-button' onClick={() => this.makeAjaxCall()}>SEARCH</button>
-          <p id="previous-button">previous</p>
+          <p id={this.state.previousButton} onClick={() => this.previousButton()}>previous</p>
           <p id="next-button">next</p>
           <p className="search-results"></p>
           <p className="total-results"></p>
