@@ -15,6 +15,10 @@ class App extends Component {
     }
   }
 
+  // componentDidMount() {
+  //   this.makeAjaxCall();
+  // }
+
   searchQueryText(evt) {
     this.setState({
       searchTerm: evt.target.value,
@@ -43,10 +47,21 @@ class App extends Component {
   };
 
   previousButton() {
-    if (this.state.page > 1)
+    if (this.state.page > 1) {
       this.setState({
         page: this.state.page - 1
       })
+    }
+    this.makeAjaxCall();
+  }
+
+  nextButton() {
+    if (this.state.page < this.state.pageCount) {
+      this.setState({
+        page: this.state.page + 1
+      })
+    }
+    this.makeAjaxCall();
   }
 
 
@@ -68,8 +83,8 @@ class App extends Component {
           <p className='search'>SEARCH: </p>
           <input id='search-query' placeholder="github repository name" onKeyUp={(evt) => this.searchQueryText(evt)}/>
           <button className='search-button' onClick={() => this.makeAjaxCall()}>SEARCH</button>
-          <p id={this.state.previousButton} onClick={() => this.previousButton()}>previous</p>
-          <p id="next-button">next</p>
+          <button id={this.state.previousButton} onClick={() => this.previousButton()}>previous</button>
+          <button id={this.state.nextButton} onClick={() => this.nextButton()}>next</button>
           <p className="search-results"></p>
           <p className="total-results"></p>
           <p className="total-repos"></p>
