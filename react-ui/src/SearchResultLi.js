@@ -6,9 +6,14 @@ class SearchResultLi extends React.Component {
 
     return(
       <li className="list-item">
-        <img
-          src={this.props.avatar_url}
-          alt='user_avatar'/>
+        <a
+          href={this.props.userNameHref}
+          target='_blank'
+          rel="noopener noreferrer">
+          <img
+            src={this.props.avatar_url}
+            alt='user_avatar'/>
+        </a>
         <a
           href={this.props.userNameHref}
           target='_blank'
