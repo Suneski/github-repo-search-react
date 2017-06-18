@@ -61,15 +61,18 @@ nav {
   z-index: 5; }
   nav input {
     width: 250px; }
-  nav #search-query, nav #next-button, nav #previous-button, nav .search-results {
+  nav #search-query, nav .search-button, nav #next-button-visible, nav #previous-button-visible, nav .search-results {
     margin-left: 10px; }
   nav .search, nav #search-query, nav button {
     float: left; }
+  nav button {
+    margin-top: 1px; }
   nav .search {
     padding: 2px 0; }
-  nav #next-button, nav #previous-button {
-    display: none;
-    padding: 2px 0; }
+  nav #next-button-invisible, nav #previous-button-invisible {
+    display: none; }
+  nav #next-button-visible, nav #previous-button-visible {
+    display: block; }
   nav .search-results {
     display: none; }
   nav .total-results {
@@ -98,18 +101,17 @@ ul {
       opacity: .8;
       margin: 0 auto;
       display: block; }
-    ul li a {
+    ul li .bold {
       display: block;
       text-decoration: none;
       color: rgba(55, 51, 238, 0.8);
       text-shadow: 0 0 1px #000;
       font-size: 40px;
       padding: 2.5px 0;
-      margin-left: 120px; }
-      ul li a:hover {
-        color: rgba(0, 0, 0, 0.5); }
-    ul li .bold {
+      margin-left: 120px;
       font-weight: bold; }
+      ul li .bold:hover {
+        color: rgba(0, 0, 0, 0.5); }
 
 @media (max-width: 1250px) {
   ul li {

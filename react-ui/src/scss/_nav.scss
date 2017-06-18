@@ -9,18 +9,23 @@ nav {
   input {
     width: 250px;
   }
-  #search-query, #next-button, #previous-button, .search-results {
+  #search-query, .search-button, #next-button-visible, #previous-button-visible, .search-results {
     margin-left: 10px;
   }
   .search, #search-query, button {
     float: left;
   }
+  button {
+    margin-top: 1px;
+  }
   .search {
     padding: 2px 0;
   }
-  #next-button, #previous-button {
+  #next-button-invisible, #previous-button-invisible {
     display: none;
-    padding: 2px 0;
+  }
+  #next-button-visible, #previous-button-visible {
+    display: block;
   }
   .search-results {
     display: none;

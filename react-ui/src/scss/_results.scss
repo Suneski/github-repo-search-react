@@ -16,7 +16,7 @@ ul {
       margin: 0 auto;
       display: block;
     }
-    a {
+    .bold {
       display: block;
       text-decoration: none;
       color: rgba(55, 51, 238, 0.8);
@@ -24,12 +24,10 @@ ul {
       font-size: 40px;
       padding: 2.5px 0;
       margin-left: 120px;
+      font-weight: bold;
       &:hover {
         color: rgba(0, 0, 0, .5);
       }
-    }
-    .bold {
-      font-weight: bold;
     }
   }
 }
