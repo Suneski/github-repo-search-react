@@ -1,0 +1,62 @@
+body {
+  background-image: url('cat-paw-prints.jpg');
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 0 10px;
+  background-color: white;
+  border-radius: 10px;
+  overflow: auto;
+}
+
+.top-portion-left {
+  width: 65%;
+  float: left;
+}
+
+.top-portion-right {
+  width: 35%;
+  float: right;
+}
+
+.my-name {
+  color: red;
+}
+
+.bio {
+  color: grey;
+}
+
+.rocky {
+  border-radius: 10%;
+  display: block;
+  float: right;
+  margin: 10px auto;
+}
+
+.bottom-portion {
+  clear: both;
+  overflow: auto;
+  background-color: grey;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.bottom-portion-left {
+  float: left;
+  width: 70%;
+}
+
+.henry-and-rocky {
+  width: 95%;
+  margin: 2.5%;
+  border-radius: 10px;
+}
+
+.bottom-portion-right {
+  text-align: center;
+  margin: 0 auto;
+}

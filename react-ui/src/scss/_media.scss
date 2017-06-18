@@ -1,0 +1,25 @@
+@media (max-width: 1250px) {
+  ul li {
+    height: 75px;
+    img {
+      width: 75px;
+    }
+    a {
+      font-size: 30px;
+      margin-left: 95px;
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  ul li {
+    height: 50px;
+    a {
+      font-size: 20px;
+      margin-left: 70px;
+    }
+    img {
+      width: 50px;
+    }
+  }
+}
