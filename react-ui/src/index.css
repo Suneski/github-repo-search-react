@@ -62,7 +62,7 @@ nav {
   nav input {
     width: 250px; }
   nav #search-query, nav .search-button, nav #next-button-visible, nav #previous-button-visible, nav .search-results {
-    margin-left: 10px; }
+    margin: 0 5px; }
   nav .search, nav #search-query, nav button {
     float: left; }
   nav button {
@@ -73,16 +73,16 @@ nav {
     display: none; }
   nav #next-button-visible, nav #previous-button-visible {
     display: block; }
-  nav .search-results {
+  nav #current-page {
+    padding-top: 2px; }
+  nav #total-repos {
+    position: absolute;
+    top: 7px;
+    right: 10px; }
+  nav .details-invisible {
     display: none; }
-  nav .total-results {
-    display: none;
-    float: right;
-    margin-right: 10px; }
-  nav .total-repos {
-    float: right;
-    padding-right: 10px;
-    display: none; }
+  nav .details-visible {
+    display: block; }
 
 ul {
   margin-top: 40px; }

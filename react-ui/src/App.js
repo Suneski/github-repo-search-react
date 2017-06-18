@@ -9,15 +9,14 @@ class App extends Component {
     this.state = {
       searchTerm: '',
       page: '',
+      totalCount: '',
+      pageCount: '',
+      details: 'details-invisible',
       searchResults: [],
       previousButton: 'previous-button-invisible',
       nextButton: 'next-button-invisible',
     }
   }
-
-  // componentDidMount() {
-  //   this.makeAjaxCall();
-  // }
 
   searchQueryText(evt) {
     this.setState({
@@ -36,6 +35,7 @@ class App extends Component {
         totalCount: data.total_count,
         pageCount: Math.ceil(data.total_count / 30),
         searchResults: data.items,
+        details: 'visible',
       })
       if (this.state.pageCount > 1) {
         this.setState({
@@ -81,13 +81,17 @@ class App extends Component {
       <div className="App">
         <nav>
           <p className='search'>SEARCH: </p>
+
           <input id='search-query' placeholder="github repository name" onKeyUp={(evt) => this.searchQueryText(evt)}/>
+
           <button className='search-button' onClick={() => this.makeAjaxCall()}>SEARCH</button>
+
           <button id={this.state.previousButton} onClick={() => this.previousButton()}>previous</button>
+
           <button id={this.state.nextButton} onClick={() => this.nextButton()}>next</button>
-          <p className="search-results"></p>
-          <p className="total-results"></p>
-          <p className="total-repos"></p>
+
+          <p className={this.state.details} id="current-page">Page: {this.state.page} of {this.state.pageCount}</p>
+          <p className={this.state.details} id="total-repos">Total Repositories: {this.state.totalCount}</p>
         </nav>
 
         <ul id='repos'>

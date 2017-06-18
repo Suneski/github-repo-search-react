@@ -10,7 +10,7 @@ nav {
     width: 250px;
   }
   #search-query, .search-button, #next-button-visible, #previous-button-visible, .search-results {
-    margin-left: 10px;
+    margin: 0 5px;
   }
   .search, #search-query, button {
     float: left;
@@ -27,17 +27,18 @@ nav {
   #next-button-visible, #previous-button-visible {
     display: block;
   }
-  .search-results {
+  #current-page {
+    padding-top: 2px;
+  }
+  #total-repos {
+    position: absolute;
+    top: 7px;
+    right: 10px;
+  }
+  .details-invisible {
     display: none;
   }
-  .total-results {
-    display: none;
-    float: right;
-    margin-right: 10px;
-  }
-  .total-repos {
-    float: right;
-    padding-right: 10px;
-    display: none;
+  .details-visible {
+    display: block
   }
 }
